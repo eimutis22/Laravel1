@@ -19,3 +19,6 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::post('/register','RegisterController@index');
+
+Route::get('/foo/bar','UriController@index');
