@@ -10,6 +10,7 @@
         <input type="submit">
     </form>
 
+<a href="/displayusers">Display list of registered users</a>
 
 </div>
 

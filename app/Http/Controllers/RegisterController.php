@@ -35,4 +35,13 @@ class RegisterController extends Controller
         $users = DB::select('select * from LaravelUser');
         return view('display_users',['users'=>$users]);
     }
+
+    public function deleteuser($usr){
+        DB::delete('delete from LaravelUser where Username = ?',[$usr]);
+        echo "Record deleted successfully.<br/>";
+
+        $users = DB::select('select * from LaravelUser');
+        return view('display_users',['users'=>$users]);
+        // echo '<a href="/delete-records">Click Here</a> to go back.';
+    }
 }

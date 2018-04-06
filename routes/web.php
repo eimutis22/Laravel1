@@ -24,3 +24,5 @@ Route::post('/register','RegisterController@index');
 Route::get('/foo/bar','UriController@index');
 
 Route::get('/displayusers','RegisterController@displayusers');
+
+Route::get('/deleteuser/{username}','RegisterController@deleteuser');
