@@ -28,4 +28,11 @@ class RegisterController extends Controller
 
 
     }
+
+    public function displayusers(){
+        echo "User List <br>";
+
+        $users = DB::select('select * from LaravelUser');
+        return view('display_users',['users'=>$users]);
+    }
 }
